@@ -1,0 +1,36 @@
+.body-area{
+    background-color: aliceblue;
+}
+
+.header-area{
+    background-color: aqua;
+}
+
+.container{
+    border: 2px solid rgb(239, 236, 228);
+    background-color: rgb(72, 21, 120);
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 60px 60px 60px 60px;
+    grid-template-areas:
+    "container-nav"
+    "container-section"
+    "container-footer";
+
+}
+
+.container-nav{
+    grid-area: container-nav;
+    background-color: blueviolet;
+
+}
+
+.container-section{
+    grid-area: container-section;
+    background-color: brown;
+}
+
+.container-footer{
+    grid-area: container-footer;
+    background-color: chocolate;
+}
