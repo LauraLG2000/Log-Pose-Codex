@@ -1,33 +1,41 @@
 const express = require('express');
-const knex = require('knex');
-
+const {findAllPirates, findPirate, findCrew, addPirate, modifyPirate, removePirate, pirateExistsById, pirateExistsByName, crewExistsByName}= require('./service/pirates');
 const app = express();
 app.use(express.json());
 
-const db = knex({
-    client: 'sqlite3',
-    connection: {
-        filename: 'pirates.db'
-    }
-})
 
 app.get('/pirates', async (req, res) => {
-    const characters = await db('characters').select('*');
-    res.json(characters);
-})
+    //TODO soporte filtros
+    const pirates = findAllPirates();
+    res.status(200).json(pirates);
+});
 
 app.get('/pirates/:id', async (req, res) => {
     const id =req.params.id;
+    const pirate = findPirate(id);
 
-    //TODO el personaje existe, sino devuelve un 404
+    if(!cityExistsById(id)){
+        return res.status(404).json({
+            code: 404,
+            title: 'not-found',
+            message: 'The pirate does not exist'
+        });
+    }
 
-    const character = (await db('pirates').select('*').where({id: id})).first();
-
-    res.status(200).json(character);
-})
+    res.status(200).json(pirate);
+});
 
 app.post('/pirates', async (req, res) => {
     const name = req.body.name;
+
+    if(pirateExistsByName(name)){
+        return res.status(404).json({
+            code: 409,
+            title: 'Conflict',
+            message: 'A pirate already exists with that name'
+        });
+    }
+    //TODO comprobar que la edad y la recompensa son de tipo entero
     const nickname = req.body.nickname;
     const crew = req.body.crew;
     const crewPosition = req.body.crewPosition;
@@ -35,35 +43,38 @@ app.post('/pirates', async (req, res) => {
     const devilFruit = req.body.devilFruit;
     const bounty = req.body.bounty;
 
-    const newPirate = await db('pirates').insert({
-        name: name,
-        nickname: nickname,
-        crew: crew,
-        crewPosition: crewPosition,
-        age: age,
-        devilFruit: devilFruit,
-        bounty: bounty
-    })
-
+    const newPirate = addPirate(name, nickname, crew, crewPosition, age, devilFruit, bounty);
+    //TODO devolver los datos del pirata como respuesta
     res.status(201).json(newPirate);
-})
+});
 
 app.delete('/pirates/:id', async (req, res) => {
     const id = req.params.id;
 
-    //TODO comprobar que existe el pirata antes de eliminarlo de la lista
+    if(!pirateExistsById(id)){
+        return res.status(404).json({
+            code:404,
+            title: 'not found',
+            message: 'the pirate does not exist'
+        });
+    }
+    const deletePirate = removePirate();
 
-    await db('pirates').where({id: id}).del();
-
-    res.status(204).end();
-})
+    res.status(204).end(deletePirate);
+});
 
 app.put('/pirates/:id', async (req, res) => {
     const id = req.params.id;
 
-    //TODO Comprobar que existe el pirata antes de actualizar
+    if(!pirateExistsById(id)){
+        return res.status(404).json({
+            code: 404,
+            title: 'not-found',
+            message: 'the pirate does not exist'
+        });
+    }
+
     const name = req.body.name;
-    //Validar que el pirata existe
     const nickname = req.body.nickname;
     const crew = req.body.crew;
     const crewPosition = req.body.crewPosition;
@@ -71,19 +82,10 @@ app.put('/pirates/:id', async (req, res) => {
     const devilFruit = req.body.devilFruit;
     const bounty = req.body.bounty;
 
-    await db('pirates').update({
-        name: name,
-        nickname: nickname,
-        crew: crew,
-        crewPosition: crewPosition,
-        age: age,
-        devilFruit: devilFruit,
-        bounty: bounty
-    })
-
-    res.status(204).end();    
-})
+    const changePirate = modifyPirate(name, nickname, crew, crewPosition, age, devilFruit, bounty);
+    res.status(204).end(changePirate);    
+});
 
 app.listen(8080, () => {
     console.log("Iniciando el backend en el puerto 8080");
-})
+});
