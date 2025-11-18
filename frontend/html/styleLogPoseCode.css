@@ -6,32 +6,35 @@
 }
 
 .header-area {
-    /*TODO meter imagen fondo*/
+    /*TODO meter imagen fondo. La imagen está, pero no saca bien*/
+    background-image: url(./images/background-header.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: center;
     position: relative;
-    margin: 15px;
+    min-height: 100px;
 }
 
 .header-logoImage {
-    position: absolute;
     width: 400px;
     height: 400px;
+    position: absolute;
     transform: translateY(-50%);
 }
 
 .container {
     border: 2px solid rgb(239, 236, 228);
-    padding-top: 11rem;
     /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
                     nav no quede tapado por el logo*/
     display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 60px auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px auto auto;
     grid-template-areas:
-        "container-nav container-nav"
-        "container-pirateList container-lateral"
-        "container-footer container-footer";
+        "container-nav"
+        "container-pirateList"
+        "container-footer";
 }
 
 .container-nav {
@@ -65,13 +68,18 @@
 
 .container-pirateList {
     grid-area: container-pirateList;
-    background-color: blueviolet;
-    padding: 1rem;
+    /*background-color: blueviolet;*/
+    background-image: url(./images/Madera_tablero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(auto, auto);
     gap: 20px;
-
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    margin: 0 8rem; /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
+    
 }
 
 .pirateList-line{
@@ -81,14 +89,23 @@
 .pirateList-wantedPoster{
     background-color:  white;
     max-width: 300px;
-
-
+    transform: transform 0.2s;
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
+.pirateList-wantedPoster:hover{
+    transform: translateY(-5px);
+}
+
+
+/*
 .container-lateral{
     grid-area: container-lateral;
     background-color: chartreuse;
 }
+    */
 
 .container-footer {
     grid-area: container-footer;
@@ -96,33 +113,33 @@
 }
 
 @media (max-width: 768px) {
-
-    .header-area {
-        /*TODO meter imagen fondo*/
-        display: flex;
-        justify-content: center;
-        position: relative;
-        margin: 20px;
-    }
-
-    .logo-image {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        transform: translateY(-50%);
-    }
-
     .container {
     border: 2px solid rgb(239, 236, 228);
     padding-top: 11rem;
     /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
                     nav no quede tapado por el logo*/
     display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 60px auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px auto auto;
     grid-template-areas:
-        "container-nav container-nav"
-        "container-pirateList container-lateral"
-        "container-footer container-footer";
+        "container-nav"
+        "container-pirateList"
+        "container-footer";
+}
+
+.container-pirateList {
+    grid-area: container-pirateList;
+    /*background-color: blueviolet;*/
+    background-image: url(./images/Madera_tablero.jpg);
+    background-size: auto;
+    background-repeat: repeat-y;
+    padding: 1rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns:  repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: minmax(auto, auto);
+    gap:20px;
+    margin: 0 4rem; /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
+    
 }
 }
