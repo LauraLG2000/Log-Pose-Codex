@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,71 @@
 <body class="body-area">
 
     <header class="header-area">
-
+        <img class="header-logoImage" src="./images/Logotype.png">
     </header>
 
     <div class="container">
         <nav class="container-nav">
+            <!-- Barra de busqueda-->
+            <div class="nav-search">
+                <form method="get" id="search-pirate">
+                    <fieldset>
+                        <input type="text" id="s" value="" placeholder="Buscar" />
+                        <input class="search-button" type="submit" value="" />
+                        <i class="search"></i>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- Meter nuevos datos para un form-->
+            <div>
+                <p><button class="nav-newPirateButon">Nuevo Pirata</button></p>
+            </div>
 
         </nav>
+        
+        <section class="container-pirateList">
+            <!--Por cada linea seran 4-5 posters de se busca de piratas-->
+                <div class="pirateList-wantedPoster">
+                    <p>se busca</p>
+                    <img src="https://placehold.co/200" alt="foto del cartel">
+                </div>
 
-        <section class="container-section">
+                <div class="pirateList-wantedPoster">
+                    <p>se busca</p>
+                    <img src="https://placehold.co/200" alt="foto del cartel">
+                </div>
+
+                <div class="pirateList-wantedPoster">
+                    <p>se busca</p>
+                    <img src="https://placehold.co/200" alt="foto del cartel">
+                </div>
+
+                <div class="pirateList-wantedPoster">
+                    <p>se busca</p>
+                    <img src="https://placehold.co/200" alt="foto del cartel">
+                </div>
+
+                <div class="pirateList-wantedPoster">
+                    <p>se busca</p>
+                    <img src="https://placehold.co/200" alt="foto del cartel">
+                </div>
+
+        </section>
+
+        <section class="container-lateral">
 
         </section>
 
         <footer class="container-footer">
+            <div>
+                <p>prueba pie de pagina</p>
+            </div>
 
         </footer>
 
     </div>
-    
+
 </body>
+
 </html>

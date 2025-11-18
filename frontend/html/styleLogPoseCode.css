@@ -1,36 +1,128 @@
-.body-area{
-    background-color: aliceblue;
-}
-
-.header-area{
-    background-color: aqua;
-}
-
-.container{
-    border: 2px solid rgb(239, 236, 228);
-    background-color: rgb(72, 21, 120);
+.body-area {
+    background-color: #E2CEB4;
     display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 60px 60px 60px 60px;
+    /*TODO meter un display flex para centrar el body en la pagina web*/
+
+}
+
+.header-area {
+    /*TODO meter imagen fondo*/
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 15px;
+}
+
+.header-logoImage {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    transform: translateY(-50%);
+}
+
+.container {
+    border: 2px solid rgb(239, 236, 228);
+    padding-top: 11rem;
+    /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
+                    nav no quede tapado por el logo*/
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 60px auto auto auto;
     grid-template-areas:
-    "container-nav"
-    "container-section"
-    "container-footer";
-
+        "container-nav container-nav"
+        "container-pirateList container-lateral"
+        "container-footer container-footer";
 }
 
-.container-nav{
+.container-nav {
     grid-area: container-nav;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-search{
+    float: none;
+    margin-bottom: 25px;
+    margin-top: 29px;
+    text-align: left;
+}
+
+.search-button{
+    width: 42px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.nav-newPirateButton{
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.container-pirateList {
+    grid-area: container-pirateList;
     background-color: blueviolet;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(auto, auto);
+    gap: 20px;
 
 }
 
-.container-section{
-    grid-area: container-section;
-    background-color: brown;
+.pirateList-line{
+    display: flex;
 }
 
-.container-footer{
+.pirateList-wantedPoster{
+    background-color:  white;
+    max-width: 300px;
+
+
+}
+
+.container-lateral{
+    grid-area: container-lateral;
+    background-color: chartreuse;
+}
+
+.container-footer {
     grid-area: container-footer;
     background-color: chocolate;
+}
+
+@media (max-width: 768px) {
+
+    .header-area {
+        /*TODO meter imagen fondo*/
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 20px;
+    }
+
+    .logo-image {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        transform: translateY(-50%);
+    }
+
+    .container {
+    border: 2px solid rgb(239, 236, 228);
+    padding-top: 11rem;
+    /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
+                    nav no quede tapado por el logo*/
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 60px auto auto auto;
+    grid-template-areas:
+        "container-nav container-nav"
+        "container-pirateList container-lateral"
+        "container-footer container-footer";
+}
 }
