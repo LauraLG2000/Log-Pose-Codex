@@ -68,17 +68,17 @@
 
 .container-pirateList {
     grid-area: container-pirateList;
-    /*background-color: blueviolet;*/
-    background-image: url(./images/Madera_tablero.jpg);
+    background-color: blueviolet;
+   /* background-image: url(./images/Madera_tablero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
     padding: 2rem;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(auto, auto);
-    margin: 0 8rem; /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
+    margin: 0 10rem; /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
     
 }
 
@@ -92,11 +92,18 @@
     transform: transform 0.2s;
     display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
 .pirateList-wantedPoster:hover{
     transform: translateY(-5px);
+}
+
+.wantedPoster-image{
+    width: 150px;
+    height: 100px;
 }
 
 
