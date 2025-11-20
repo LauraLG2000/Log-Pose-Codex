@@ -17,7 +17,7 @@ const getPirate = (async(req, res) => {
         });
     }
 
-    res.status(200).json(pirate);
+    res.status(200).json(id);
 
 });
 
@@ -35,6 +35,7 @@ const getPiratesByCrew = (async(req, res) => {
     res.status(200).json(pirate);
 });
 
+//Nuevo pirata
 const postPirate = (async(req, res) => {
     const name = req.body.name;
 
@@ -60,6 +61,7 @@ const postPirate = (async(req, res) => {
     res.status(201).json(newPirate);
 });
 
+//Editar pirata
 const putPirate = (async(req, res) => {
     const id = req.params.id;
 
@@ -86,6 +88,7 @@ const putPirate = (async(req, res) => {
     
 });
 
+//Eliminar pirata
 const deletePirate = (async(req, res) => {
     const id = req.params.id;
 
