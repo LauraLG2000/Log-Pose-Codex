@@ -8,7 +8,7 @@
 .header-area {
     /*TODO meter imagen fondo. La imagen está, pero no saca bien*/
     background-image: url(./images/background-header.jpg);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -45,21 +45,21 @@
     justify-content: space-around;
 }
 
-.nav-search{
+.nav-search {
     float: none;
     margin-bottom: 25px;
     margin-top: 29px;
     text-align: left;
 }
 
-.search-button{
+.search-button {
     width: 42px;
     height: 25px;
     cursor: pointer;
     transition: all 0.25s linear;
 }
 
-.nav-newPirateButton{
+.nav-newPirateButton {
     width: 60px;
     height: 40px;
     cursor: pointer;
@@ -67,9 +67,10 @@
 }
 
 .container-pirateList {
+    margin: auto;
     grid-area: container-pirateList;
     background-color: blueviolet;
-   /* background-image: url(./images/Madera_tablero.jpg);
+    /* background-image: url(./images/Madera_tablero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;*/
@@ -78,32 +79,49 @@
     gap: 20px;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(auto, auto);
-    margin: 0 10rem; /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
-    
+    /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
+
 }
 
-.pirateList-line{
+.pirateList-line {
     display: flex;
 }
 
-.pirateList-wantedPoster{
-    background-color:  white;
+.pirateList-wantedPoster {
+    margin: auto;
+    background-color: rgb(235, 223, 193);
     max-width: 300px;
     transform: transform 0.2s;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 15px rgb(90, 61, 49);
+
 }
 
-.pirateList-wantedPoster:hover{
+.pirateList-wantedPoster:hover {
     transform: translateY(-5px);
 }
 
-.wantedPoster-image{
-    width: 150px;
-    height: 100px;
+.wantedFont {
+    font-family: "Newsreader", serif;
+    font-size: 55px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.wantedPoster-image {
+    width: 250px;
+    height: 200px;
+}
+
+.wantedPoster-information {
+    font-family: "Newsreader", serif;
+    font-size: 30px;
+    margin: auto;
+    padding: 1rem;
 }
 
 
@@ -121,32 +139,46 @@
 
 @media (max-width: 768px) {
     .container {
-    border: 2px solid rgb(239, 236, 228);
-    padding-top: 11rem;
-    /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
+        border: 2px solid rgb(239, 236, 228);
+        padding-top: 11rem;
+        /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
                     nav no quede tapado por el logo*/
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 60px auto auto;
-    grid-template-areas:
-        "container-nav"
-        "container-pirateList"
-        "container-footer";
-}
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 60px auto auto;
+        grid-template-areas:
+            "container-nav"
+            "container-pirateList"
+            "container-footer";
+    }
 
-.container-pirateList {
-    grid-area: container-pirateList;
-    /*background-color: blueviolet;*/
-    background-image: url(./images/Madera_tablero.jpg);
-    background-size: auto;
-    background-repeat: repeat-y;
-    padding: 1rem;
-    display: grid;
-    gap: 20px;
-    grid-template-columns:  repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-rows: minmax(auto, auto);
-    gap:20px;
-    margin: 0 4rem; /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
-    
-}
+    .container-pirateList {
+        margin: auto;
+        grid-area: container-pirateList;
+        /*background-color: blueviolet;*/
+        padding: 1rem;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: minmax(auto, auto);
+        gap: 20px;
+        margin: 0 4rem;
+        /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
+
+    }
+
+    .pirateList-wantedPoster {
+        margin: auto;
+        background-color: rgb(235, 223, 193);
+        max-width: 300px;
+        transform: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 3px 3px 15px rgb(90, 61, 49);
+
+    }
+
 }
