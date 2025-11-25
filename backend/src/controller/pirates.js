@@ -1,4 +1,4 @@
-const {findAllPirates, pirateExistsById, pirateExistsByName, piratesExistByCrew, modifyPirate, addPirate, removePirate} = require('../service/pirates');
+const {findAllPirates, pirateExistsById, pirateExistsByName, piratesExistByCrew, modifyPirate, addPirate, removePirate, findPirate, findCrew} = require('../service/pirates');
 
 const getPirates = (async(req, res) => {
     //TODO soporte de filtros
@@ -17,7 +17,8 @@ const getPirate = (async(req, res) => {
         });
     }
 
-    res.status(200).json(id);
+    const pirate = await findPirate(id);
+    res.status(200).json(pirate);
 
 });
 
@@ -31,15 +32,16 @@ const getPiratesByCrew = (async(req, res) => {
             message: 'the crew has not been founded'
         });
     }
-
+    const pirate = await findCrew(crew);
     res.status(200).json(pirate);
+    
 });
 
 //Nuevo pirata
 const postPirate = (async(req, res) => {
     const name = req.body.name;
 
-    if( await pirateExistsByName(name)){
+    if(await pirateExistsByName(name)){
         return res.status(409).json({
             code: 409,
             title: 'conflict',
@@ -52,8 +54,8 @@ const postPirate = (async(req, res) => {
     const birthDate = req.body.birthDate;
     const devilFruit = req.body.devilFruit;
     const bounty = req.body.bounty;
-    const captured=req.body.capture;
-    const height=req.body.height
+    const captured = req.body.captured;
+    const height = req.body.height;
     
 
     const newPirate = await addPirate(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, captured, height);
@@ -65,26 +67,26 @@ const postPirate = (async(req, res) => {
 const putPirate = (async(req, res) => {
     const id = req.params.id;
 
-    if(! await pirateExistsById(id)){
+    if(!await pirateExistsById(id)){
         return res.status(404).json({
             code: 404,
             title: 'not-found',
             message: 'the pirate has not been founded'
         });
     }
-    const name = req.params.name;
+    const name = req.body.name;
     const nickname = req.body.nickname;
     const crew = req.body.crew;
     const crewPosition = req.body.crewPosition;
     const birthDate = req.body.birthDate;
     const devilFruit = req.body.devilFruit;
     const bounty = req.body.bounty;
-    const captured=req.body.capture;
-    const height=req.body.height
+    const captured = req.body.captured;
+    const height = req.body.height;
 
-    const changePirate = await modifyPirate(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, captured, height);
+    await modifyPirate(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, captured, height);
     //TODO devolver datos como respuesta
-    res.status(201).json(changePirate);
+    res.status(204).end();
     
 });
 
@@ -92,7 +94,7 @@ const putPirate = (async(req, res) => {
 const deletePirate = (async(req, res) => {
     const id = req.params.id;
 
-    if(! await pirateExistsById(id)){
+    if(!await pirateExistsById(id)){
         return res.status(404).json({
             code: 404,
             title: 'not-found',
@@ -100,9 +102,9 @@ const deletePirate = (async(req, res) => {
         });
     }
 
-    const deletePirate = await removePirate(id);
+    await removePirate(id);
 
-    res.status(204).end(deletePirate);
+    res.status(204).end();
 });
 
 module.exports = {

@@ -1,23 +1,19 @@
 const db = require('../configuration/database.js').db;
 
 const findAllPirates = (async() => {
-   const result = await db('pirates').select('*');
-   return result;
-    
+   return await db('pirates').select('*');    
 });
 
 const findPirate = (async(id) => {
-    const result = await db('pirates').select('*').where({id: id}).first();
-    return result;    
+    return await db('pirates').select('*').where({id: id}).first();
 });
 
 const findCrew = (async(crew) => {
-    const result = await db('pirates').select('*').where({crew: crew}).first();
-    return result;
+    return await db('pirates').select('*').where({crew: crew}).first();
 });
 
 const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, captured, height) => {
-    const result = await db('pirates').insert({
+    return await db('pirates').insert({
         name: name,
         nickname: nickname,
         crew: crew,
@@ -28,13 +24,10 @@ const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFru
         captured: captured,
         height: height
     });
-
-    return result;
-    
 });
 
-const modifyPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, captured, height) => {
-    const result = await db('pirates').update({
+const modifyPirate = (async(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, captured, height) => {
+    return await db('pirates').where({id:id}).update({
         name: name,
         nickname: nickname,
         crew: crew,
@@ -45,29 +38,35 @@ const modifyPirate = (async(name, nickname, crew, crewPosition, birthDate, devil
         captured: captured,
         height: height
     });
-    return result;
-    
 });
 
 const removePirate = (async(id) => {
-    const result = await db('pirates').where({id: id}).del();
-    return result;
+    return await db('pirates').where({id: id}).del();
 });
 
 const pirateExistsById = (async(id) => {
-    const result = await db('pirates').select('*').where({id: id}).first();
-    return result != null;
-    
+    const pirate = await db('pirates').select('*').where({id: id}).first();    
+    return pirate != null;
 });
 
 const pirateExistsByName = (async(name) => {
-    const result = await db('pirates').select('*').where({name: name}).first();
-    return result != null;
+    const pirate = await db('pirates').select('*').where({name: name}).first();
+    if(pirate == undefined){
+        return false;
+    }
+    else{
+        return true;
+    }
 });
 
 const piratesExistByCrew = (async(crew) => {
-    const result = await db('pirates').select('*').where({crew: crew}).first();
-    return result != null;
+    const pirate = await db('pirates').select('*').where({crew: crew}).first();
+    if(pirate == undefined){
+        return false;
+    }
+    else{
+        return true;
+    }
 });
 
 module.exports = {
