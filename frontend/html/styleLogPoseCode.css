@@ -24,8 +24,6 @@
 
 .container {
     border: 2px solid rgb(239, 236, 228);
-    /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
-                    nav no quede tapado por el logo*/
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 60px auto auto;
@@ -99,7 +97,7 @@ input[type="submit"]:hover,
 }
 
 .container-pirateList {
-    margin: auto;
+    margin: 50px;
     grid-area: container-pirateList;
     background-color: blueviolet;
     /* background-image: url(./images/Madera_tablero.jpg);
@@ -109,7 +107,7 @@ input[type="submit"]:hover,
     padding: 2rem;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(auto, auto);
     /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
 
@@ -121,9 +119,12 @@ input[type="submit"]:hover,
 
 .pirateList-wantedPoster {
     margin: auto;
+    /* Puedes añadir una textura o sombreado */
     background-color: rgb(235, 223, 193);
+    background-image: url(images/WantedPosterTexture.jpg);
+    background-blend-mode: saturation;
     border: 4px solid #cfa87b;
-    max-width: 300px;
+    width: 90%;
     transform: transform 0.2s;
     display: flex;
     flex-direction: column;
@@ -139,7 +140,7 @@ input[type="submit"]:hover,
 
 .wantedFont {
     font-family: "Newsreader", serif;
-    font-size: 55px;
+    font-size: 50px;
     margin: auto;
     padding: 1rem;
 }
@@ -154,7 +155,7 @@ input[type="submit"]:hover,
 }
 
 .wantedPoster-status {
-    font-size: 35px;
+    font-size: 30px;
     margin-top: 4px;
     margin-bottom: 4px;
     font-family: 'Newsreader', serif;
@@ -207,11 +208,9 @@ input[type="submit"]:hover,
     .container {
         border: 2px solid rgb(239, 236, 228);
         padding-top: 11rem;
-        /*No me termina de convencer que tenga que meter esto para añadir separarcion del header y el container para que el
-                    nav no quede tapado por el logo*/
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 60px auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "container-nav"
             "container-pirateList"
@@ -219,32 +218,62 @@ input[type="submit"]:hover,
     }
 
     .container-pirateList {
-        margin: auto;
+        margin: 50px;
         grid-area: container-pirateList;
-        /*background-color: blueviolet;*/
+        background-color: blueviolet;
         padding: 1rem;
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(auto, auto);
-        gap: 20px;
         margin: 0 4rem;
-        /* margen de arriba y abajo cero. Margenes laterales de 8 por cada lado */
 
     }
 
     .pirateList-wantedPoster {
         margin: auto;
         background-color: rgb(235, 223, 193);
-        max-width: 300px;
+        border: 4px solid #cfa87b;
         transform: transform 0.2s;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        box-shadow: 3px 3px 15px rgb(90, 61, 49);
-
+        box-shadow: 3px 3px 15px rgb(124, 79, 60);
     }
 
+    .pirateList-wantedPoster:hover {
+        transform: translateY(-5px);
+    }
+
+    .wantedFont {
+        font-family: "Newsreader", serif;
+        font-size: px;
+        margin: auto;
+        padding: 1rem;
+    }
+
+    .wantedPoster-name {
+        font-family: 'Newsreader', serif;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .wantedPoster-bounty {
+        font-size: 40px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        color: #784f1e;
+        font-family: 'Newsreader', serif;
+        letter-spacing: 1px;
+    }
+
+    .wantedPoster-marine {
+        font-size: 20px;
+        font-weight: bold;
+        color: #3d2b13;
+        letter-spacing: 4px;
+        font-family: 'Newsreader', serif;
+        text-align: left;
+    }
 }
