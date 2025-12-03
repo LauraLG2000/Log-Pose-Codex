@@ -1,0 +1,241 @@
+.body-area {
+    background-image: url(./images/background_body.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: grid;
+}
+
+.header-area {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.container {
+    border: 2px solid rgb(239, 236, 228);
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "container-nav container-nav"
+        "container-pirate container-pirateRelations"
+        "container-footer container-footer";
+}
+
+.container-nav {
+    grid-area: container-nav;
+    background-color: aqua;
+}
+
+.nav-search {
+    float: none;
+    margin-bottom: 25px;
+    margin-top: 29px;
+    text-align: left;
+}
+
+input[type="text"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 500px;
+    height: 35px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.search-button {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+input[type="submit"],
+.search-button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover,
+.search-button:hover {
+    background: #0056b3;
+    /* Color al pasar el mouse */
+}
+
+.nav-button {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.container-pirate {
+    grid-area: container-pirate;
+    background-image: radial-gradient(
+        ellipse at center,
+        #cbb689 0%,
+        #dcc58f 50%,
+        #9b774b 100%
+    );
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 1%;
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "pirate-title pirate-title"
+        "pirate-image pirate-data"
+        "pirate-haki pirate-powers"
+        "comeback comeback";
+}
+
+.pirate-title {
+    grid-area: pirate-title;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pirate-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pirate-image {
+    grid-area: pirate-image;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wantedPoster-image {
+    width: 90%;
+    height: 90%;
+    margin: 1%;
+    border-radius: 8px;
+    filter: sepia(0.5) contrast(1.2);
+}
+
+.pirate-data {
+    grid-area: pirate-data;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pirate-haki {
+    grid-area: pirate-haki;
+    display: flex;
+    margin: 2%;
+    background-color: #e7e5da;
+    border-radius: 10px;
+    opacity: 50%;
+    padding: 1%;
+}
+
+.haki{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.haki-image{
+    width: 20%;
+}
+
+.pirate-powers {
+    grid-area: pirate-powers;
+}
+
+.comeback{
+    grid-area: comeback;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-pirateRelations {
+    grid-area: container-pirateRelations;
+    background-image: radial-gradient(
+        ellipse at center,
+        #cbb689 0%,
+        #dcc58f 50%,
+        #9b774b 100%
+    );
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.relation-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pirateRelation-image{
+    width: 30%;
+    margin: 1%;
+    border-radius: 8px;
+    filter: sepia(0.5) contrast(1.2);
+}
+
+.container-footer {
+    grid-area: container-footer;
+}
+
+/*Sección de tipografías*/
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 50px;
+    margin: 1%;
+}
+
+h2 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 1%;
+    color: rgb(137, 102, 28);
+    text-shadow: 2px 2px 1px rgba(93, 44, 20, 0.2);
+}
+
+h3 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 20px;
+    margin: 1%;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 1%;
+    text-align: justify;
+}
