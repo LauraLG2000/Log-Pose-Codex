@@ -7,88 +7,97 @@
 }
 
 .header-area {
-    background-color: aquamarine;
     display: flex;
-    justify-content: center;
-    min-height: 200px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.header-image {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.image-size {
+    width: 30%;
+    height: 30%;
 }
 
 .container {
     border: 2px solid rgb(239, 236, 228);
     display: grid;
+    margin: auto;
+    width: 90%;
     grid-template-columns: 80% 20%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
         "container-nav container-nav"
-        "container-pirate container-pirateRelations"
-        "container-footer container-footer";
+        "container-pirate container-pirateRelations";
 }
 
 .container-nav {
     grid-area: container-nav;
     background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    border-radius: 20px;
+
 }
 
 .nav-search {
-    float: none;
-    margin-bottom: 25px;
-    margin-top: 29px;
+    margin-bottom: 15px;
+    margin-top: 19px;
     text-align: left;
 }
 
-input[type="text"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 500px;
-    height: 35px;
-    padding: 8px 12px;
+.search-pirate {
+    width: 300px;
+}
+
+.search-info {
+    max-width: 30%;
+    background-color: green;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    transition: border-color 0.3s ease;
+    margin-right: 10px;
 }
 
-.search-button {
-    width: 100px;
-    height: 50px;
-    cursor: pointer;
-    transition: all 0.25s linear;
-}
-
-input[type="submit"],
-.search-button {
-    background: #007BFF;
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 20px;
-    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
 }
 
-input[type="submit"]:hover,
-.search-button:hover {
-    background: #0056b3;
-    /* Color al pasar el mouse */
-}
-
-.nav-button {
-    width: 60px;
-    height: 40px;
-    cursor: pointer;
-    transition: all 0.25s linear;
-}
 
 .container-pirate {
     grid-area: container-pirate;
-    background-image: radial-gradient(
-        ellipse at center,
-        #cbb689 0%,
-        #dcc58f 50%,
-        #9b774b 100%
-    );
+    background-image: radial-gradient(ellipse at center,
+            #cbb689 0%,
+            #dcc58f 50%,
+            #9b774b 100%);
     margin-top: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -151,12 +160,13 @@ input[type="submit"]:hover,
     padding: 1%;
 }
 
-.haki{
+.haki {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.haki-image{
+
+.haki-image {
     width: 20%;
 }
 
@@ -164,7 +174,7 @@ input[type="submit"]:hover,
     grid-area: pirate-powers;
 }
 
-.comeback{
+.comeback {
     grid-area: comeback;
     display: flex;
     justify-content: flex-end;
@@ -172,26 +182,27 @@ input[type="submit"]:hover,
 
 .container-pirateRelations {
     grid-area: container-pirateRelations;
-    background-image: radial-gradient(
-        ellipse at center,
-        #cbb689 0%,
-        #dcc58f 50%,
-        #9b774b 100%
-    );
+    background-image: radial-gradient(ellipse at center,
+            #cbb689 0%,
+            #dcc58f 50%,
+            #9b774b 100%);
     margin: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2%;
 }
 
-.relation-list{
+.relation-list {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 1%;
+
 }
 
-.pirateRelation-image{
+.pirateRelation-image {
     width: 30%;
     margin: 1%;
     border-radius: 8px;
@@ -199,7 +210,16 @@ input[type="submit"]:hover,
 }
 
 .container-footer {
-    grid-area: container-footer;
+    margin-top: 10px;
+    background-color: #007bff;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-data {
+    display: flex;
+    justify-content: center;
+    gap:10px;
 }
 
 /*Sección de tipografías*/
@@ -227,11 +247,11 @@ h3 {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
     margin: 1%;
 }
 
-p {
+.description-font {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
