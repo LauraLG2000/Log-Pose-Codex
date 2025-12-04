@@ -1,5 +1,5 @@
 const { response } = require('express');
-const { findAllPirates, findPirateByName, findPirateNickname, pirateExistsById, pirateExistsByName, pirateExistByNickname, modifyPirate, addPirate, removePirate, findPirate } = require('../service/pirates');
+const { findAllPirates,  findPirate, findPirateByName, findPirateNickname, findPirateCrew, pirateExistsById, pirateExistsByName, pirateExistByNickname, pirateExistByCrew, modifyPirate, addPirate, removePirate} = require('../service/pirates');
 
 const getPirates = (async (req, res) => {
     const name = req.query.name;
@@ -70,22 +70,27 @@ const postPirate = (async (req, res) => {
     const birthDate = req.body.birthDate;
     const devilFruit = req.body.devilFruit;
     const bounty = req.body.bounty;
+    const height = req.body.height;
+    const dateManga = req.body.dateManga;
+    const dateAnime = req.body.dateAnime;
     const description = req.body.description;
     const conquerHaki = req.body.conquerHaki;
     const obserHaki = req.body.obserHaki;
     const armarHaki = req.body.armarHaki;
-    const height = req.body.height;
 
-    if (name === null || nickname === null || bounty === null) {
+    if (name === null || nickname === null || bounty === null || crew === null) {
         return res.status(400).json({
             code: 400,
             return: 'bad-request',
             message: 'There are fields to be filled in.'
         });
-
     }
 
-    const newPirate = await addPirate(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, description, conquerHaki, obserHaki, armarHaki, height);
+    const isConquerHaki = !!conquerHaki;
+    const isObserHaki = !!obserHaki;
+    const isArmarHaki = !!armarHaki;
+
+    const newPirate = await addPirate(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki);
 
     res.status(201).json({
         code: 201,
@@ -114,13 +119,19 @@ const putPirate = (async (req, res) => {
     const birthDate = req.body.birthDate;
     const devilFruit = req.body.devilFruit;
     const bounty = req.body.bounty;
+    const height = req.body.height;
+    const dateManga = req.body.dateManga;
+    const dateAnime = req.body.dateAnime;
     const description = req.body.description;
     const conquerHaki = req.body.conquerHaki;
     const obserHaki = req.body.obserHaki;
     const armarHaki = req.body.armarHaki;
-    const height = req.body.height;
 
-    await modifyPirate(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, description, conquerHaki, obserHaki, armarHaki, height);
+    const isConquerHaki = !!conquerHaki;
+    const isObserHaki = !!obserHaki;
+    const isArmarHaki = !!armarHaki;
+
+    await modifyPirate(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki);
 
     res.status(204).end();
 

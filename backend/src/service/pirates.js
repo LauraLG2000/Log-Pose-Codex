@@ -16,7 +16,7 @@ const findPirateNickname = (async(nickname) => {
     return await db('pirates').select('*').where({nickname: nickname}).first();
 });
 
-const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, description, conquerHaki, obserHaki, armarHaki, height) => {
+const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, conquerHaki, obserHaki, armarHaki) => {
     return await db('pirates').insert({
         name: name,
         nickname: nickname,
@@ -25,15 +25,17 @@ const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFru
         birthDate: birthDate,
         devilFruit: devilFruit,
         bounty: bounty,
+        height: height,
+        dateManga: dateManga,
+        dateAnime: dateAnime,
         description: description, 
         conquerHaki: conquerHaki, 
         obserHaki: obserHaki, 
-        armarHaki: armarHaki,
-        height: height
+        armarHaki: armarHaki
     });
 });
 
-const modifyPirate = (async(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, description, conquerHaki, obserHaki, armarHaki, height) => {
+const modifyPirate = (async(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, conquerHaki, obserHaki, armarHaki) => {
     return await db('pirates').where({id:id}).update({
         name: name,
         nickname: nickname,
@@ -42,11 +44,13 @@ const modifyPirate = (async(id, name, nickname, crew, crewPosition, birthDate, d
         birthDate: birthDate,
         devilFruit: devilFruit,
         bounty: bounty,
+        height: height,
+        dateManga: dateManga,
+        dateAnime: dateAnime,
         description: description, 
         conquerHaki: conquerHaki, 
         obserHaki: obserHaki, 
-        armarHaki: armarHaki,
-        height: height
+        armarHaki: armarHaki
     });
 });
 
@@ -79,5 +83,5 @@ module.exports = {
     removePirate,
     pirateExistsById,
     pirateExistsByName,
-    pirateExistByNickname
+    pirateExistByNickname,
 }
