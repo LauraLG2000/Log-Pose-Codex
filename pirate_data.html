@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="stylePirate_data.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Momo+Trust+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+DE+SAS:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Space+Grotesk:wght@300..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Paytone+One&family=Playwrite+DE+SAS:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&family=Satisfy&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_box" />
 </head>
 
 <body class="body-area">
@@ -21,85 +25,130 @@
             <img class="image-size" src="images/onePieceLogo.png" alto="One Piece Logo">
         </div>
         <div class="header-options">
-            <p class="description-font">home</p>
-            <p class="description-font">Playable cards</p>
-            <p class="description-font">Noticias</p>
-        </div>
-        <div>
-            <p><button class="nav-buton">Nuevo Pirata</button></p>
-        </div>
-
-    </header>
-    <div class="container">
-        <nav class="container-nav">
-            <!-- Barra de busqueda-->
-            <div class="nav-search">
-                <p>Nombre, Apodo o Tripulación</p>
+            <div>
                 <form method="get" id="search-pirate">
-                    <input type="text" id="s" class="search-pirate" value="" placeholder="Buscar" />
-                    <input class="search-button" type="submit" value="Buscar" />
-                    <i class="search"></i>
+                    <input type="search" id="s" class="search-pirate" value="" placeholder="Busca por nombre o apodo" />
                 </form>
-                <p>¡Encuentra fácilmente a tu pirata favorito!</p>
             </div>
-            <div class="search-info">
-                <p>Busca un pirata por su nombre, su apodo o la tripulación a la que pertenece.</p>
-            </div>
-        </nav>
 
+            <ul class="menu">
+                <li><a href=""></a>Home</li>
+                <li><a href=""></a>Universo</li>
+                <li><a href=""></a>Media</li>
+                <li><a href=""></a>Noticias</li>
+                <li><a href=""></a> Pirata Nuevo</li>
+                <li><a href=""></a><span class="material-symbols-outlined">account_box</span></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
         <section class="container-pirate">
-            <div class="pirate-title">
+            <div class="pirate-column01">
                 <div>
                     <h1>WANTED</h1>
                 </div>
-                <div class="pirate-name">
-                    <h1>Monkey.D.Luffy</h1>
-                    <h2>3.000.000.000 berries</h2>
+                <div class="pirate-image">
+                    <img class="wantedPoster-image" src="images/wanted_image.jpg">
                 </div>
+                <div>
+                    <h2>DEAD OR ALIVE</h2>
+                </div>
+            </div>
 
-            </div>
-            <div class="pirate-image">
-                <img class="wantedPoster-image" src="images/wanted_image.jpg">
-            </div>
-            <div class="pirate-data">
-                <h3>Alias: Sombrero de Paja</h3>
-                <p class="description-font">Un chico que salió a la mar persiguiendo el sueño de ser el próximo rey de
-                    los piratas, no sin antes
-                    volver a ver a Shanks y encontrar el One Piece. Vive alimentado de su gran sueño y una voluntda
-                    férrea, adora las aventuras arriesgadas y cuida de sus compañeros; ¡está dispuesto a morir por
-                    ellos! Su tesoro es el sombrero de paja que le prestó Shanks. Es el capitán de los piratas del
-                    Sombrero de Paja.
-                </p>
-                <p class="description-font">Altura: 1.72m</p>
-                <p class="description-font">Edad: 17 años pre timeskip, 19 post timeskip</p>
-                <p class="description-font">Cumpleaños: 5 de mayo</p>
-            </div>
-            <div class="pirate-haki">
-                <div class="haki">
-                    <p class="description-font">Haki del consquistador</p>
-                    <img class="haki-image" src="images/haki_conquer.png" alt="Haki del Conquistador">
+            <div class="pirate-column02">
+                <div class="pirate-name">
+                    <h2>Monkey.D.Luffy</h2>
+                    <h3>3.000.000.000 Belly</h3>
                 </div>
-                <div class="haki">
-                    <p class="description-font">Haki de observación</p>
-                    <img class="haki-image" src="images/haki_obser.png" alt="Haki de observación">
-                </div>
-                <div class="haki">
-                    <p class="description-font">Haki de armadura</p>
-                    <img class="haki-image" src="images/haki_armature.png" alt="Haki de Armadura">
+                <div class="pirate-data">
+                    <div>
+                        <span class="subtitle01-font">Alias:</span>
+                        <span class="subtitle02-font">Sombrero de Paja</span>
+                        <p class="description-font">Un chico que salió a la mar persiguiendo el sueño de ser el próximo
+                            rey
+                            de los piratas, no sin antes volver a ver a Shanks y encontrar el One Piece. Vive alimentado
+                            de
+                            su gran sueño y una voluntad férrea, adora las aventuras arriesgadas y cuida de sus
+                            compañeros;
+                            ¡está dispuesto a morir por ellos! Su tesoro es el sombrero de paja que le prestó Shanks. Es
+                            el
+                            capitán de los piratas del Sombrero de Paja.
+                        </p>
+                        <div class="pirate-information">
+                            <span class="subtitle01-font">Altura:</span>
+                            <span class="subtitle02-font">1.72m.</span>
+                        </div>
+                        <div class="pirate-information">
+                            <span class="subtitle01-font">Edad:</span>
+                            <span class="subtitle02-font">17 años pre timeskip, 19 post timeskip.</span>
+                        </div>
+                        <div class="pirate-information">
+                            <span class="subtitle01-font">Cumpleaños:</span>
+                            <span class="subtitle02-font">5 de mayo.</span>
+                        </div>
+                        <div class="pirate-information">
+                            <span class="subtitle01-font">Fruta del diablo:</span>
+                            <span class="subtitle02-font">Gomu gomu no mi.</span>
+                        </div>
+                        <div class="pirate-information">
+                            <span class="subtitle01-font">Tipo:</span>
+                            <span class="subtitle02-font">Zoan Mítica.</span>
+                        </div>
+                        <div class="pirate-information">
+                            <span class="subtitle01-font">Haki:</span>
+                            <span class="subtitle02-font">Conquistador, observación y armadura.</span>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="pirate-powers">
-                <p class="description-font">Fruta del diablo</p>
-                <p class="description-font">Tipo</p>
+            <div class="btn-options">
+                <button class="btn-put"><a href=""></a>Actualizar Información</button>
+                <button class="btn-delete"><a href=""></a>Eliminar Cartel</button>
             </div>
-            <div class="comeback">
-                <p class="description-font">Boton de volver</p>
+
+            <div class="container-pirateRelations">
+                <div>
+                    <h4>Camaradas</h4>
+                </div>
+                <div class="relations">
+                    <div class="relation-list">
+                        <img class="pirateRelation-image" src="images/zoro.jpg">
+                        <p class="description-font">Roronoa Zoro</p>
+                    </div>
+                    <div class="relation-list">
+                        <img class="pirateRelation-image" src="images/nami.jpg">
+                        <p class="description-font">Nami</p>
+                    </div>
+                    <div class="relation-list">
+                        <img class="pirateRelation-image" src="images/sanji.jpg">
+                        <p class="description-font">Vinsmoke Sanji</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Otros Piratas</h4>
+                </div>
+                <div class="relations">
+                    <div class="relation-list">
+                        <img class="pirateRelation-image" src="images/zoro.jpg">
+                        <p class="description-font">Roronoa Zoro</p>
+                    </div>
+                    <div class="relation-list">
+                        <img class="pirateRelation-image" src="images/nami.jpg">
+                        <p class="description-font">Nami</p>
+                    </div>
+                    <div class="relation-list">
+                        <img class="pirateRelation-image" src="images/sanji.jpg">
+                        <p class="description-font">Vinsmoke Sanji</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="container-pirateRelations">
+        <section class="container-announcement">
             <div>
-                <h3>Camaradas</h3>
+                <h4>Camaradas</h4>
             </div>
             <div class="relation-list">
                 <img class="pirateRelation-image" src="images/zoro.jpg">
@@ -114,36 +163,65 @@
                 <p class="description-font">Vinsmoke Sanji</p>
             </div>
             <div>
-                <h3>Otros Piratas</h3>
+                <h4>Otros Piratas</h4>
             </div>
         </section>
 
-        
-
     </div>
-<footer class="container-footer">
-            <div class="footer-data">
-                <p>¡Registrate para recibir notificación de todas las actualizaciones!</p>
-            </div>
-            <div class="footer-data">
-                <div>
-                    <p>Correo electronico</p>
-                    <p>Fecha de nacimiento</p>
-                    <p><button class="nav-buton">Registrate</button></p>
+    <footer class="container-footer">
+        <div class="footer-data">
+            <div class="footer-form">
+                <h5>¡Registrate para recibir notificación de todas las actualizaciones!</h5>
+                <div class="form-columns">
+                    <div>
+                        <p class="checkbox-font">Me gustaría recibir correos electrónicos acerca de:</p>
+                        <label class="option-checkbox">
+                            <input type="checkbox"><label for="box" class="checkbox-font">Nuevos piratas,
+                                actualizaciones y muchas más cosas del universo de One Piece</label>
+                        </label>
+                        <label class="option-checkbox">
+                            <input type="checkbox"><label for="box" class="checkbox-font">Acepto las
+                                <strong><u>Condiciones de uso</u></strong> y el <strong><u>Aviso de
+                                        privacidad</u></strong> de LogPoseCodex.es</label>
+                        </label>
+                    </div>
+                    <form>
+                        <input class="field" placeholder="Correo electrónico" type="text" required>
+                        <div class="space-small">
+                            <label for="frecuencia"></label>
+                            <select id="frecuencia" name="frecuencia" class="field-small" required>
+                                <option value="" selected disabled>Frecuencia correos</option>
+                                <option value="solo-novedades">Solo novedades</option>
+                                <option value="semanal">Semanal</option>
+                                <option value="quincenal">Quincenal</option>
+                                <option value="mensual">Mensual</option>
+                            </select>
+                            <input class="field-small" placeholder="Fecha de nacimiento" type="date" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Registrarse</button>
+                    </form>
                 </div>
-                <div>
-                    <p>Boton de aceptar terminos</p>
-                </div>
-            </div>
-            <div class="footer-data">
-                <p>Condiciones de Uso</p>
-                <p>Aviso de Privacidad</p>
-                <p>Pagina de cookies</p>
-                <p>Informacion legal</p>
-                <p>2025 Toei Animation. 1995-2025 Toei Animation/ShonenJump</p>
-            </div>
 
-        </footer>
+            </div>
+            <div>
+                <div>
+                    <h5>Log Pose Codex</h5>
+                    <div>
+                        <p class="p-footer">Condiciones de Uso</p>
+                        <p class="p-footer">Aviso de Privacidad</p>
+                        <p class="p-footer">Pagina de cookies</p>
+                        <p class="p-footer">Informacion legal</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="p-footer footer-information">2025 Toei Animation. 1995-2025 Toei Animation/ShonenJump</p>
+        </div>
+
+
+    </footer>
 </body>
 
 </html>
