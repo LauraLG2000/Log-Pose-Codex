@@ -177,6 +177,7 @@ form {
         width: 100%;
         display: flex;
         justify-content: space-around;
+        overflow: hidden;
     }
 
     form {
@@ -217,11 +218,11 @@ form {
         font-family: "Inter", sans-serif;
         padding-left: 18px;
         padding-top: 20px;
+        overflow: hidden;
     }
 
     .field-date {
-        margin-top: 10px;
-        margin-bottom: 5px;
+        margin: 2%;
         padding: 18px;
         width: 89%;
         font-size: 14px;
@@ -242,13 +243,14 @@ form {
         margin-right: 9px;
         gap: 10px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .boton {
-        margin-left: 28%;
+        margin-left: 30%;
         border-radius: 30px;
-        width: 200px;
+        width: 40%;
         height: 50px;
         background:
             radial-gradient(ellipse at top, rgb(93, 149, 145)),
