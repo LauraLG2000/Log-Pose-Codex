@@ -74,7 +74,8 @@
 .menu li {
     padding: 10px;
     cursor: pointer;
-    font-family: "Inter", sans-serif;
+    font-family: "Rye", serif;
+    font-weight: normal;
     font-size: 18px;
     white-space: nowrap;
 }
@@ -337,6 +338,7 @@ h5 {
 p {
     font-family: "Inter", sans-serif;
     text-align: justify;
+    color: white;
 }
 
 .p-footer {
@@ -463,7 +465,7 @@ p {
 
     .container-footer {
         margin-top: 10px;
-        padding:10px;
+        padding: 10px;
         background-color: rgba(65, 92, 95, 1.0);
         display: flex;
         flex-direction: column;
