@@ -61,7 +61,7 @@ const postPirate = (async (req, res) => {
         return res.status(409).json({
             code: 409,
             title: 'conflict',
-            message: 'The pirate is already on the hunt and capture'
+            message: 'The pirate is already on the hunt and capture.'
         });
     }
     const nickname = req.body.nickname;
