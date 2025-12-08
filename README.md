@@ -1,9 +1,8 @@
 # ⚓ Log Pose Codex API v1.0
-==
 
 **Log Pose Codex** es una API inspirada en el mundo de *One Piece*, diseñada para gestionar información sobre los piratas de los mares. Esta API ofrece operaciones CRUD completas para manipular registros de piratas dentro de una base de datos SQLite.
 
-## 🌐 Backend API - (Funcional)
+## 🔧 Backend API - (Funcional)
 
 - **CRUD completo de piratas**
   - `GET /pirates` — Obtiene la lista completa de piratas registrados.
@@ -23,7 +22,7 @@
   - **Estructura modular**  
   Código organizado en controladores, modelos y rutas para favorecer la escalabilidad y el mantenimiento.
 
-  ## 🖥️ Frontend - Páginas HTML (Guías Visuales)
+  ## 🖼️ Frontend - Páginas HTML (Guías Visuales)
 
   El proyecto incluye un frontend estático con **4 páginas HTML** que sirven como **maquetas visuales** de cómo funcionaría la interfaz se conecten a la API:
 

@@ -7,7 +7,8 @@
 }
 
 h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "Rye", serif;
+    font-weight: normal;
     font-size: 15px;
     color: rgba(86, 123, 128);
 }
@@ -129,6 +130,8 @@ button {
     border: none;
     margin-top: 15px;
     margin-bottom: 20px;
+    font-family: "Rye", serif;
+    font-weight: normal;
     cursor: pointer;
 }
 
@@ -251,7 +254,7 @@ button {
 
     button {
         margin-left: 30%;
-        border-radius: 30px;
+        border-radius: clamp(10px, 4vw, 30px);
         width: 40%;
         height: 50px;
         background:
@@ -261,7 +264,10 @@ button {
         font-weight: bold;
         border: none;
         margin-top: 15px;
+        font-weight: normal;
+        font-size: clamp(6px, 4vw, 14px);
         margin-bottom: 20px;
+        max-width: 100%;
         cursor: pointer;
     }
 
