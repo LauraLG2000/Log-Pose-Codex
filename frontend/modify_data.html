@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Monkey.D.Luffy_data</title>
+    <link rel="stylesheet" href="styleModify_data.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Paytone+One&family=Playwrite+DE+SAS:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&family=Satisfy&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_box" />
+</head>
+
+<body class="body-area">
+
+    <header class="header-area">
+        <div class="header-image">
+            <img class="image-size" src="images/onePieceLogo.png" alto="One Piece Logo">
+        </div>
+        <div class="header-options">
+            <div>
+                <form method="get" id="search-pirate">
+                    <input type="search" id="s" class="search-pirate" value="" placeholder="Busca por nombre o apodo" />
+                </form>
+            </div>
+
+            <ul class="menu">
+                <li onclick="window.location.href='logPoseCode.html'">Home</li>
+                <li>Universo</li>
+                <li>Media</li>
+                <li>Noticias</li>
+                <li onclick="window.location.href='form.html'">Registrar Pirata</li>
+                <li><span class="material-symbols-outlined">account_box</span></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="container-pirate">
+            <div class="pirate-column01">
+                <div>
+                    <h1>WANTED</h1>
+                </div>
+                <div>
+                    <img class="wantedPoster-image" src="images/wanted_image.jpg">
+                </div>
+                <form action="subir-php" method="post" enctype="multipart/form-data" class="select-image">
+                    <input type="file" id="foto" name="foto" accept="image/*" class="input-file">
+                    <button type="submit" class="btn-send subtitle01-font">Enviar</button>
+                </form>
+                <div>
+                    <h2>DEAD OR ALIVE</h2>
+                </div>
+            </div>
+            <div class="pirate-column02">
+                <textarea class="modifyField">Monkey.D.Luffy</textarea>
+                <textarea class="modifyField">3.000.000.000 Berry</textarea>
+                <textarea class="modifyField">Sombrero de Paja</textarea>
+                <textarea class="field-description" rows="9" cols="90">
+                Un chico que salió a la mar persiguiendo el sueño de ser el próximo rey de los piratas, no sin antes volver a ver a Shanks y encontrar el One Piece. 
+                Vive alimentado de su gran sueño y una voluntad férrea, adora las aventuras arriesgadas y cuida de sus compañeros; ¡está dispuesto a morir por ellos! 
+                Su tesoro es el sombrero de paja que le prestó Shanks. Es el capitán de los piratas del Sombrero de Paja.</textarea>
+                <textarea class="modifyField">Banda del Sombrero de Paja</textarea>
+                <textarea class="modifyField">Capitán</textarea>
+                <textarea class="modifyField">5 de mayo</textarea>
+                <textarea class="modifyField">Gomu gomu no mi</textarea>
+                <textarea class="modifyField">Zoan Mítica</textarea>
+                <textarea class="modifyField">1,72m</textarea>
+                <div class="space-date">
+                    <h4>Aparición Manga:</h4>
+                    <input class="field-date" placeholder=" " type="date" required><br>
+                </div>
+                <div class="space-date">
+                    <h4>Aparición Anime:</h4>
+                    <input class="field-date" placeholder=" " type="date" required><br>
+                </div>
+                <h4>Haki</h4>
+                <div class="haki-checkbox">
+
+                    <label class="haki-option">
+                        <input type="checkbox"><label for="box">Conquistador</label>
+                    </label>
+                    <label class="haki-option">
+                        <input type="checkbox"><label for="box">Observación</label>
+                    </label>
+                    <label class="haki-option">
+                        <input type="checkbox"><label for="box">Armadura</label>
+                    </label>
+                </div>
+            </div>
+
+            <div class="btn-options">
+                <button onclick="window.location.href='pirate_data.html'"
+                    class="btn-put subtitle01-font">Guardar</button>
+                <button onclick="window.location.href='pirate_data.html'"
+                    class="btn-delete subtitle01-font">Cancelar</button>
+            </div>
+
+            <div class="container-pirateRelations">
+                <div>
+                    <h2>Camaradas</h2>
+                </div>
+                <div class="relations">
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/zoro.jpg">
+                        <p class="poster-font">Roronoa Zoro</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/nami.jpg">
+                        <p class="poster-font">Nami</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/usopp.jpg">
+                        <p class="poster-font">God Usopp</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/sanji.jpg">
+                        <p class="poster-font">Vinsmoke Sanji</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/chopper.jpg">
+                        <p class="poster-font">Tony Tony Chopper</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/robin.jpg">
+                        <p class="poster-font">Nico Robin</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/franky.jpg">
+                        <p class="poster-font">Franky</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/brook.jpeg">
+                        <p class="poster-font">Brook</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/jimbei.jpg">
+                        <p class="poster-font">Jimbei</p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Otros Piratas</h2>
+                </div>
+                <div class="relations">
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/shanks.jpg">
+                        <p class="poster-font">Shanks</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/buggy.jpg">
+                        <p class="poster-font">Buggy</p>
+                    </div>
+                    <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
+                        <h4>WANTED</h4>
+                        <img class="pirateRelation-image" src="images/law.jpg">
+                        <p class="poster-font">Trafalgar.D.Law</p>
+                    </div>
+                </div>
+        </section>
+        <section class="container-announcement">
+            <div class="announcement">
+                <img class="announcement-image" src="./images/announcement01.jpg">
+                <div class="wantedPoster-information">
+                    <a href="https://wafuu.com/es-es/products/bandai-one-piece-card-game-premium-booster-the-best-vol-2-prb02-box-10-packs?srsltid=AfmBOopLBwa0dPz9KfIUo55zOgh_RjAUZcElGtY4qqsBQ53tJ3iGTayB"
+                        target="_blank">THE
+                        BEST</a>
+                    <p>¡Potencia
+                        tu mazo con el nuevo Premium Booster ‘THE BEST’ de One Piece!</p>
+                </div>
+            </div>
+
+            <div class="announcement">
+                <img class="announcement-image" src="./images/announcement02.jpg">
+                <div class="wantedPoster-information">
+                    <a href="https://store.steampowered.com/app/2449170/ONE_PIECE_PIRATE_WARRIORS_4_paquete_de_One_Piece_Film_Red/"
+                        target="_blank">NUEVOS PERSONAJES</a>
+                    <p>¡One Piece Warriors 4 lanza a la batalla más personajes!</p>
+                </div>
+            </div>
+
+            <div class="announcement">
+                <img class="announcement-image" src="./images/announcement03.jpg">
+                <div class="wantedPoster-information">
+                    <a href="https://www.crunchyroll.com/es-es/series/GRMG8ZQZR/one-piece?srsltid=AfmBOorTlAb_s3B50pLEMvOTrkSVtHp73VYgTtt5ptzPSGDWma7pCMBc"
+                        target="_blank">NUEVO CAPÍTULO</a>
+                    <p>¡Nuevo capítulo del anime disponible en crunchyroll!</p>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    </div>
+    <footer class="container-footer">
+        <div class="footer-data">
+            <div class="footer-form">
+                <h5>¡Registrate para recibir notificación de todas las actualizaciones!</h5>
+                <div class="form-columns">
+                    <div>
+                        <p class="checkbox-font">Me gustaría recibir correos electrónicos acerca de:</p>
+                        <label class="option-checkbox">
+                            <input type="checkbox"><label for="box" class="checkbox-font">Nuevos piratas,
+                                actualizaciones y muchas más cosas del universo de One Piece</label>
+                        </label>
+                        <label class="option-checkbox">
+                            <input type="checkbox"><label for="box" class="checkbox-font">Acepto las
+                                <strong><u>Condiciones de uso</u></strong> y el <strong><u>Aviso de
+                                        privacidad</u></strong> de LogPoseCodex.es</label>
+                        </label>
+                    </div>
+                    <form>
+                        <input class="field" placeholder="Correo electrónico" type="text" required>
+                        <div class="space-small">
+                            <label for="frecuencia"></label>
+                            <select id="frecuencia" name="frecuencia" class="field-small" required>
+                                <option value="" selected disabled>Frecuencia correos</option>
+                                <option value="solo-novedades">Solo novedades</option>
+                                <option value="semanal">Semanal</option>
+                                <option value="quincenal">Quincenal</option>
+                                <option value="mensual">Mensual</option>
+                            </select>
+                            <input class="field-small" placeholder="Fecha de nacimiento" type="date" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Registrarse</button>
+                    </form>
+                </div>
+
+            </div>
+            <div>
+                <div class="cookies">
+                    <h5>Log Pose Codex</h5>
+                    <div class="footer-cookies">
+                        <p onclick="window.location.href=''" class="p-footer">Condiciones de Uso</p>
+                        <p onclick="window.location.href=''" class="p-footer">Aviso de Privacidad</p>
+                        <p onclick="window.location.href=''" class="p-footer">Pagina de cookies</p>
+                        <p onclick="window.location.href=''" class="p-footer">Informacion legal</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="p-footer footer-information">2025 Toei Animation. 1997-2025 Toei Animation/ShonenJump</p>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

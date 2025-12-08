@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "65b6cfa3-4d22-4434-a5e5-fdc55c69155b",
+		"name": "pirates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49087939",
+		"_collection_link": "https://a28998-4325994.postman.co/workspace/LAURA-(1SW)-LABARTA-GONZ%C3%A1LEZ's-~6ca69f2e-969e-4675-8b73-8aee98cf2c98/collection/49087939-65b6cfa3-4d22-4434-a5e5-fdc55c69155b?action=share&source=collection_link&creator=49087939"
+	},
+	"item": [
+		{
+			"name": "/pirates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pirates?crew=Tripulación del Sombrero de Paja",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pirates"
+					],
+					"query": [
+						{
+							"key": "crew",
+							"value": "Tripulación del Sombrero de Paja"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pirates/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pirates/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pirates",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pirates",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nico Robin\",\r\n    \"nickname\": \"Niña Demonio\",\r\n    \"crew\": \"Tripulación del Sombrero de Paja\",\r\n    \"crewPosition\": \"Arqueóloga\",\r\n    \"birthDate\": \"6 de febrero\",\r\n    \"devilFruit\":\"Hana Hana no mi\",\r\n    \"bounty\": 930000000,\r\n    \"height\": 1.88,\r\n    \"dateManga\": \"22 de noviembre de 1999\",\r\n    \"dateAnime\":\"29 de abril de 2001\",\r\n    \"description\": \"Con ocho años ya pusieron precio a su cabeza, así que ha ocultado su identidad real hasta ahora que conoce a Luffy y su tripulación. Al haber nacido en un entorno académico, posee un conocimiento extenso sobre distintas materias.\",\r\n    \"conquerHaki\": 0,\r\n    \"obserHaki\": 0,\r\n    \"armarHaki\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pirates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pirates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pirates/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pirates/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pirates",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pirates/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nami\",\r\n    \"nickname\": \"La Gata Ladrona\",\r\n    \"crew\": \"Tripulación del Sombrero de Paja\",\r\n    \"crewPosition\": \"Navegante\",\r\n    \"birthDate\": \"3 de julio\",\r\n    \"devilFruit\": \"\",\r\n    \"bounty\": 366000000,\r\n    \"height\": 1.70,\r\n    \"dateManga\": \"15 de septiembre de 1997\",\r\n    \"dateAnime\": \"20 de octubre de 1999\",\r\n    \"description\": \"Era una ladrona especializada en robarles a los piratas que decidió unirse a la banda de Luffy tras su propuesta. Tiene conocimientos en varias materias, pero sobre todo en meteorología y navegación, donde ningún experto le hace sombra. Para sacar provecho de ese saber, actúa como navegante de la banda. Siendo una chica de carácter fuerte y con las cosas claras, es la que pone firme a la banda.\",\r\n    \"conquerHaki\": 0,\r\n    \"obserHaki\": 0,\r\n    \"armarHaki\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pirates/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pirates",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
