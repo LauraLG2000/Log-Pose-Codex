@@ -51,47 +51,56 @@
                 <div>
                     <img class="wantedPoster-image" src="images/wanted_image.jpg">
                 </div>
+                <form action="subir-php" method="post" enctype="multipart/form-data" class="select-image">
+                    <input type="file" id="foto" name="foto" accept="image/*" class="input-file">
+                    <button type="submit" class="btn-send subtitle01-font">Enviar</button>
+                </form>
                 <div>
                     <h2>DEAD OR ALIVE</h2>
                 </div>
             </div>
-
             <div class="pirate-column02">
-                <div class="pirate-name">
-                    <h2>Monkey.D.Luffy</h2>
-                    <h3>3.000.000.000 Belly</h3>
+                <textarea class="modifyField">Monkey.D.Luffy</textarea>
+                <textarea class="modifyField">3.000.000.000 Berry</textarea>
+                <textarea class="modifyField">Sombrero de Paja</textarea>
+                <textarea class="field-description" rows="9" cols="90">
+                Un chico que salió a la mar persiguiendo el sueño de ser el próximo rey de los piratas, no sin antes volver a ver a Shanks y encontrar el One Piece. 
+                Vive alimentado de su gran sueño y una voluntad férrea, adora las aventuras arriesgadas y cuida de sus compañeros; ¡está dispuesto a morir por ellos! 
+                Su tesoro es el sombrero de paja que le prestó Shanks. Es el capitán de los piratas del Sombrero de Paja.</textarea>
+                <textarea class="modifyField">Banda del Sombrero de Paja</textarea>
+                <textarea class="modifyField">Capitán</textarea>
+                <textarea class="modifyField">5 de mayo</textarea>
+                <textarea class="modifyField">Gomu gomu no mi</textarea>
+                <textarea class="modifyField">Zoan Mítica</textarea>
+                <textarea class="modifyField">1,72m</textarea>
+                <div class="space-date">
+                    <h4>Aparición Manga:</h4>
+                    <input class="field-date" placeholder=" " type="date" required><br>
                 </div>
-                <div class="pirate-data">
-                    <div>
-                        <input class="modifyField" placeholder="Alias" type="text" required>
-                        <textarea class="field-description" placeholder="Descripción" rows="9" cols="90"></textarea>
-                        <input class="modifyField" placeholder="Tripulación" type="text" required>
-                        <input class="modifyField" placeholder="Puesto" type="text" required>
-                        <input class="modifyField" placeholder="Cumpleaños" type="text" required>
-                        <input class="modifyField" placeholder="Fruta del Diablo" type="text" required>
-                        <input class="modifyField" placeholder="Tipo" type="text" required>
-                        <input class="modifyField" placeholder="Altura" type="text" required>
-                        <input class="field-date" placeholder=" " type="date" required><br>
-                        <input class="field-date" placeholder=" " type="date" required><br>
-                        <div class="haki-checkbox">
-                            <label class="haki-option">
-                                <input type="checkbox"><label for="box">Conquistador</label>
-                            </label>
-                            <label class="haki-option">
-                                <input type="checkbox"><label for="box">Observación</label>
-                            </label>
-                            <label class="haki-option">
-                                <input type="checkbox"><label for="box">Armadura</label>
-                            </label>
-                        </div>
+                <div class="space-date">
+                    <h4>Aparición Anime:</h4>
+                    <input class="field-date" placeholder=" " type="date" required><br>
+                </div>
+                <h4>Haki</h4>
+                <div class="haki-checkbox">
 
-                    </div>
+                    <label class="haki-option">
+                        <input type="checkbox"><label for="box">Conquistador</label>
+                    </label>
+                    <label class="haki-option">
+                        <input type="checkbox"><label for="box">Observación</label>
+                    </label>
+                    <label class="haki-option">
+                        <input type="checkbox"><label for="box">Armadura</label>
+                    </label>
                 </div>
             </div>
+
             <div class="btn-options">
-                <button onclick="window.location.href='logPoseCode.html'" class="btn-put subtitle01-font">Actualizar
-                    Información</button>
-                <button onclick="window.location.href=''" class="btn-delete subtitle01-font">Eliminar Cartel</button>
+                <button onclick="window.location.href='pirate_data.html'"
+                    class="btn-put subtitle01-font">Guardar</button>
+                <button onclick="window.location.href='pirate_data.html'"
+                    class="btn-delete subtitle01-font">Cancelar</button>
             </div>
 
             <div class="container-pirateRelations">
@@ -148,7 +157,6 @@
                 <div>
                     <h2>Otros Piratas</h2>
                 </div>
-
                 <div class="relations">
                     <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
                         <h4>WANTED</h4>
@@ -162,8 +170,8 @@
                     </div>
                     <div class="wantedPoster-mini" role="link" tabindex="0" onclick="location.href=''">
                         <h4>WANTED</h4>
-                        <img class="pirateRelation-image" src="images/kurohige.jpg">
-                        <p class="poster-font">Marshall.D.Teach</p>
+                        <img class="pirateRelation-image" src="images/law.jpg">
+                        <p class="poster-font">Trafalgar.D.Law</p>
                     </div>
                 </div>
         </section>
@@ -177,9 +185,6 @@
                     <p>¡Potencia
                         tu mazo con el nuevo Premium Booster ‘THE BEST’ de One Piece!</p>
                 </div>
-                <div class="wantedPoster-marine">
-                    <h4>Marine</h4>
-                </div>
             </div>
 
             <div class="announcement">
@@ -188,9 +193,6 @@
                     <a href="https://store.steampowered.com/app/2449170/ONE_PIECE_PIRATE_WARRIORS_4_paquete_de_One_Piece_Film_Red/"
                         target="_blank">NUEVOS PERSONAJES</a>
                     <p>¡One Piece Warriors 4 lanza a la batalla más personajes!</p>
-                </div>
-                <div class="wantedPoster-marine">
-                    <h4>Marine</h4>
                 </div>
             </div>
 
@@ -201,11 +203,9 @@
                         target="_blank">NUEVO CAPÍTULO</a>
                     <p>¡Nuevo capítulo del anime disponible en crunchyroll!</p>
                 </div>
-                <div class="wantedPoster-marine">
-                    <h4>Marine</h4>
-                </div>
             </div>
-        </section>
+    </div>
+    </section>
 
     </div>
     <footer class="container-footer">
