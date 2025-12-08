@@ -59,7 +59,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Nico Robin\",\r\n    \"nickname\": \"Niña Demonio\",\r\n    \"crew\": \"Tripulación del Sombrero de Paja\",\r\n    \"crewPosition\": \"Arqueóloga\",\r\n    \"birthDate\": \"6 de febrero\",\r\n    \"devilFruit\":\"Hana Hana no mi\",\r\n    \"bounty\": 930000000,\r\n    \"height\": 1.88,\r\n    \"dateManga\": \"22 de noviembre de 1999\",\r\n    \"dateAnime\":\"29 de abril de 2001\",\r\n    \"description\": \"Con ocho años ya pusieron precio a su cabeza, así que ha ocultado su identidad real hasta ahora que conoce a Luffy y su tripulación. Al haber nacido en un entorno académico, posee un conocimiento extenso sobre distintas materias.\",\r\n    \"conquerHaki\": 0,\r\n    \"obserHaki\": 0,\r\n    \"armarHaki\": 0\r\n}",
+					"raw": "{\r\n    \"name\": \"Nico Robin\",\r\n    \"nickname\": \"Niña Demonio\",\r\n    \"crew\": \"Tripulación del Sombrero de Paja\",\r\n    \"crewPosition\": \"Arqueóloga\",\r\n    \"birthDate\": \"6 de febrero\",\r\n    \"devilFruit\":\"Hana Hana no mi\",\r\n    \"bounty\": 930000000,\r\n    \"height\": 1.88,\r\n    \"dateManga\": \"22 de noviembre de 1999\",\r\n    \"dateAnime\":\"29 de abril de 2001\",\r\n    \"description\": \"Con ocho años ya pusieron precio a su cabeza, así que ha ocultado su identidad real hasta ahora que conoce a Luffy y su tripulación. Al haber nacido en un entorno académico, posee un conocimiento extenso sobre distintas materias.\",\r\n    \"conquerHaki\": 0,\r\n    \"obserHaki\": 0,\r\n    \"armarHaki\": 0,\r\n    \"image\": \"images/nico-robin.png\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -116,7 +116,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Nami\",\r\n    \"nickname\": \"La Gata Ladrona\",\r\n    \"crew\": \"Tripulación del Sombrero de Paja\",\r\n    \"crewPosition\": \"Navegante\",\r\n    \"birthDate\": \"3 de julio\",\r\n    \"devilFruit\": \"\",\r\n    \"bounty\": 366000000,\r\n    \"height\": 1.70,\r\n    \"dateManga\": \"15 de septiembre de 1997\",\r\n    \"dateAnime\": \"20 de octubre de 1999\",\r\n    \"description\": \"Era una ladrona especializada en robarles a los piratas que decidió unirse a la banda de Luffy tras su propuesta. Tiene conocimientos en varias materias, pero sobre todo en meteorología y navegación, donde ningún experto le hace sombra. Para sacar provecho de ese saber, actúa como navegante de la banda. Siendo una chica de carácter fuerte y con las cosas claras, es la que pone firme a la banda.\",\r\n    \"conquerHaki\": 0,\r\n    \"obserHaki\": 0,\r\n    \"armarHaki\": 0\r\n}",
+					"raw": "{\r\n   \"name\": \"Monkey.D.Luffy\",\r\n    \"nickname\": \"Sombrero de Paja\",\r\n    \"crew\": \"Tripulación del Sombrero de Paja\",\r\n    \"crewPosition\": \"Capitán\",\r\n    \"birthDate\": \"5 de mayo\",\r\n    \"devilFruit\": \"Gomu Gomu no mi\",\r\n    \"bounty\": 3000000000,\r\n    \"height\": 1.74,\r\n    \"dateManga\": \"19/07/1997\",\r\n    \"dateAnime\": \"20/10/1999\",\r\n    \"description\": \"Un chico que salió a la mar persiguiendo el sueño de ser el próximo rey de los piratas, no sin antes volver a ver a Shanks y encontrar el One Piece. Vive alimentado de su gran sueño y una voluntda férrea, adora las aventuras arriesgadas y cuida de sus compañeros; ¡está dispuesto a morir por ellos! Su tesoro es el sombrero de paja que le prestó Shanks. Es el capitán de los piratas del Sombrero de Paja.\",\r\n    \"conquerHaki\": 1,\r\n    \"obserHaki\": 1,\r\n    \"armarHaki\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -124,7 +124,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/pirates/4",
+					"raw": "http://localhost:8080/pirates/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -132,7 +132,7 @@
 					"port": "8080",
 					"path": [
 						"pirates",
-						"4"
+						"2"
 					]
 				}
 			},
