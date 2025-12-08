@@ -112,10 +112,6 @@
     box-shadow: 2px 2px 8px rgb(49, 30, 29);
 }
 
-.pirateList-line {
-    display: flex;
-}
-
 .pirateList-wantedPoster {
     padding: 1%;
     background-image: radial-gradient(ellipse at center,

@@ -121,18 +121,6 @@ form {
     color: rgb(40, 59, 62);
 }
 
-.field {
-    margin-top: 10px;
-    padding: 15px;
-    width: 300px;
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-color: rgb(40, 59, 62);
-    border-radius: 4px;
-    border: none;
-    color: rgb(40, 59, 62);
-}
-
 .space-small {
     display: flex;
     justify-content: space-between;
@@ -240,24 +228,11 @@ input {
     align-items: center;
 }
 
-.pirate-name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
 .announcement-image {
     width: 90%;
     margin-top: 10px;
     border-radius: 8px;
     border: 3px solid rgb(102, 76, 37);
-}
-
-.pirate-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .modifyField::placeholder {
@@ -304,10 +279,6 @@ input {
     border: none;
     color: rgb(40, 59, 62);
     font-family: "Inter", sans-serif;
-}
-
-.pirate-information {
-    margin-top: 10px;
 }
 
 .space-date {
@@ -498,17 +469,10 @@ input {
 
 .container-footer {
     margin-top: 10px;
+    padding: 10px;
     background-color: rgba(65, 92, 95, 1.0);
     display: flex;
     flex-direction: column;
-}
-
-.footer-data {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
 }
 
 .footer-data {
@@ -518,8 +482,6 @@ input {
     justify-content: space-evenly;
     gap: 10px;
 }
-
-/*Sección de tipografías*/
 
 h1 {
     font-family: "Rye", serif;
@@ -593,14 +555,6 @@ a {
     font-family: "Rye", serif;
     font-weight: normal;
     text-shadow: 2px 2px 1px rgba(93, 44, 20, 0.2);
-    overflow-wrap: break-word;
-    word-break: break-word;
-}
-
-.subtitle02-font {
-    font-family: "Inter", sans-serif;
-    font-weight: normal;
-    white-space: normal;
     overflow-wrap: break-word;
     word-break: break-word;
 }
@@ -992,6 +946,4 @@ p {
         border: none;
         color: rgb(40, 59, 62);
     }
-
-
 }
