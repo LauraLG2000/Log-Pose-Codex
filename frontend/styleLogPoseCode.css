@@ -120,7 +120,7 @@
             #9b774b 100%);
     transform: transform 0.2s;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;

@@ -77,8 +77,9 @@ const postPirate = (async (req, res) => {
     const conquerHaki = req.body.conquerHaki;
     const obserHaki = req.body.obserHaki;
     const armarHaki = req.body.armarHaki;
+    const origin = req.body.origin;
 
-    if (name === null || nickname === null || bounty === null || crew === null) {
+    if (name === null || nickname === null || bounty === null || crew === null || origin === null) {
         return res.status(400).json({
             code: 400,
             return: 'bad-request',
@@ -90,7 +91,7 @@ const postPirate = (async (req, res) => {
     const isObserHaki = !!obserHaki;
     const isArmarHaki = !!armarHaki;
 
-    const newPirate = await addPirate(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki);
+    const newPirate = await addPirate(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki, origin);
 
     res.status(201).json({
         code: 201,
@@ -126,12 +127,13 @@ const putPirate = (async (req, res) => {
     const conquerHaki = req.body.conquerHaki;
     const obserHaki = req.body.obserHaki;
     const armarHaki = req.body.armarHaki;
+    const origin = req.body.origin;
 
     const isConquerHaki = !!conquerHaki;
     const isObserHaki = !!obserHaki;
     const isArmarHaki = !!armarHaki;
 
-    await modifyPirate(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki);
+    await modifyPirate(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki, origin);
 
     res.status(204).end();
 
