@@ -263,6 +263,10 @@ input {
     margin-top: 10px;
 }
 
+.pirate-information01 {
+    margin-top: 10px;
+}
+
 .btn-options {
     grid-area: btn-options;
     margin-top: 10px;
@@ -821,5 +825,9 @@ p {
         color: white;
         text-shadow: 2px 2px 1px rgba(93, 44, 20, 0.2);
         white-space: wrap;
+    }
+
+    .pirate-information01{
+        display: none;
     }
 }
