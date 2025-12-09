@@ -40,7 +40,7 @@ form {
 
 .space {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
 }
 
@@ -181,7 +181,7 @@ button {
 
     .space {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .space-small {
