@@ -40,7 +40,7 @@ form {
 
 .space {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
 }
 
@@ -51,6 +51,7 @@ form {
 
 .space-details {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: flex-start;
     gap: 15%;
 }
@@ -81,14 +82,33 @@ form {
     color: white;
 }
 
+.field-descriptionNoDisplay::placeholder {
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+.field-description {
+    margin-top: 20px;
+    font-size: 14px;
+    background-color: rgba(86, 123, 128, 0.6);
+    border-color: white;
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    padding-left: 18px;
+    padding-top: 20px;
+    resize: none;
+}
+
 .field-description::placeholder {
     font-style: italic;
     font-family: "Inter", sans-serif;
     color: white;
 }
 
-
-.field-description {
+.field-descriptionNoDisplay {
     margin-top: 20px;
     font-size: 14px;
     background-color: rgba(86, 123, 128, 0.6);
@@ -161,7 +181,7 @@ button {
 
     .space {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .space-small {
@@ -171,7 +191,7 @@ button {
 
     .space-details {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         gap: 15%;
     }
@@ -267,6 +287,10 @@ button {
         margin-bottom: 20px;
         max-width: 100%;
         cursor: pointer;
+    }
+
+    .field-descriptionNoDisplay {
+        display: none;
     }
 
 }

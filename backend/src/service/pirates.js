@@ -16,7 +16,7 @@ const findPirateNickname = (async(nickname) => {
     return await db('pirates').select('*').where({nickname: nickname}).first();
 });
 
-const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, conquerHaki, obserHaki, armarHaki) => {
+const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, conquerHaki, obserHaki, armarHaki, origin) => {
     return await db('pirates').insert({
         name: name,
         nickname: nickname,
@@ -31,11 +31,12 @@ const addPirate = (async(name, nickname, crew, crewPosition, birthDate, devilFru
         description: description, 
         conquerHaki: conquerHaki, 
         obserHaki: obserHaki, 
-        armarHaki: armarHaki
+        armarHaki: armarHaki,
+        origin: origin
     });
 });
 
-const modifyPirate = (async(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, conquerHaki, obserHaki, armarHaki) => {
+const modifyPirate = (async(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, conquerHaki, obserHaki, armarHaki, origin) => {
     return await db('pirates').where({id:id}).update({
         name: name,
         nickname: nickname,
@@ -50,7 +51,8 @@ const modifyPirate = (async(id, name, nickname, crew, crewPosition, birthDate, d
         description: description, 
         conquerHaki: conquerHaki, 
         obserHaki: obserHaki, 
-        armarHaki: armarHaki
+        armarHaki: armarHaki,
+        origin: origin
     });
 });
 
