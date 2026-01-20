@@ -1,17 +1,16 @@
 const { response } = require('express');
-const { findAllPirates,  findPirate, findPirateByName, findPirateNickname, findPirateCrew, pirateExistsById, pirateExistsByName, pirateExistByNickname, pirateExistByCrew, modifyPirate, addPirate, removePirate} = require('../service/pirates');
+const { findAllPirates,  findPirate, findPirateByName, pirateExistsById, pirateExistsByName, modifyPirate, addPirate, removePirate} = require('../service/pirates');
 
 const getPirates = (async (req, res) => {
-    const name = req.query.name;
-    const nickname = req.query.nickname;
+    const name = req.query.nombre;
 
-    if (req.query.name === undefined && req.query.nickname === undefined) {
+    if (req.query.nombre === undefined) {
         const pirates = await findAllPirates();
         return res.status(200).json(pirates);
     }
 
-    else if (req.query.name !== undefined) {
-        if (! await pirateExistsByName(name)) {
+    else if (req.query.nombre !== undefined) {
+        if (! await pirateExistsByName(nombre)) {
             return res.status(404).json({
                 code: 404,
                 title: 'not-found',
@@ -19,20 +18,7 @@ const getPirates = (async (req, res) => {
             });
         }
 
-        const pirate = await findPirateByName(name);
-        res.status(200).json(pirate);
-    }
-
-    else if (req.query.nickname !== undefined) {
-        if (! await pirateExistByNickname(nickname)) {
-            return res.status(404).json({
-                code: 404,
-                title: 'not-found',
-                message: 'the pirate has not been founded'
-            });
-        }
-
-        const pirate = await findPirateNickname(nickname);
+        const pirate = await findPirateByName(nombre);
         res.status(200).json(pirate);
     }
 });
@@ -55,30 +41,19 @@ const getPirate = (async (req, res) => {
 
 //Nuevo pirata
 const postPirate = (async (req, res) => {
-    const name = req.body.name;
+    const nombre = req.body.nombre;
 
-    if (await pirateExistsByName(name)) {
+    if (await pirateExistsByName(nombre)) {
         return res.status(409).json({
             code: 409,
             title: 'conflict',
             message: 'The pirate is already on the hunt and capture.'
         });
     }
-    const nickname = req.body.nickname;
-    const crew = req.body.crew;
-    const crewPosition = req.body.crewPosition;
-    const birthDate = req.body.birthDate;
-    const devilFruit = req.body.devilFruit;
     const bounty = req.body.bounty;
-    const height = req.body.height;
-    const dateManga = req.body.dateManga;
-    const dateAnime = req.body.dateAnime;
-    const description = req.body.description;
-    const conquerHaki = req.body.conquerHaki;
-    const obserHaki = req.body.obserHaki;
     const armarHaki = req.body.armarHaki;
 
-    if (name === null || nickname === null || bounty === null || crew === null) {
+    if (nombre === null || bounty === null) {
         return res.status(400).json({
             code: 400,
             return: 'bad-request',
@@ -86,11 +61,7 @@ const postPirate = (async (req, res) => {
         });
     }
 
-    const isConquerHaki = !!conquerHaki;
-    const isObserHaki = !!obserHaki;
-    const isArmarHaki = !!armarHaki;
-
-    const newPirate = await addPirate(name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki);
+    const newPirate = await addPirate(nombre, bounty, armarHaki);
 
     res.status(201).json({
         code: 201,
@@ -112,26 +83,11 @@ const putPirate = (async (req, res) => {
             message: 'the pirate has not been founded'
         });
     }
-    const name = req.body.name;
-    const nickname = req.body.nickname;
-    const crew = req.body.crew;
-    const crewPosition = req.body.crewPosition;
-    const birthDate = req.body.birthDate;
-    const devilFruit = req.body.devilFruit;
+    const nombre = req.body.nombre;
     const bounty = req.body.bounty;
-    const height = req.body.height;
-    const dateManga = req.body.dateManga;
-    const dateAnime = req.body.dateAnime;
-    const description = req.body.description;
-    const conquerHaki = req.body.conquerHaki;
-    const obserHaki = req.body.obserHaki;
     const armarHaki = req.body.armarHaki;
 
-    const isConquerHaki = !!conquerHaki;
-    const isObserHaki = !!obserHaki;
-    const isArmarHaki = !!armarHaki;
-
-    await modifyPirate(id, name, nickname, crew, crewPosition, birthDate, devilFruit, bounty, height, dateManga, dateAnime, description, isConquerHaki, isObserHaki, isArmarHaki);
+    await modifyPirate(id, nombre, bounty, armarHaki);
 
     res.status(204).end();
 
@@ -159,5 +115,5 @@ module.exports = {
     getPirate,
     postPirate,
     putPirate,
-    deletePirate,
+    deletePirate
 }
