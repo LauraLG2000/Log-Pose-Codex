@@ -1,6 +1,6 @@
 const knex = require('knex');
 
-const {config }=require('../configuration/config');
+const {config }=require('./config');
 
 const db = knex({
     client: 'mysql',

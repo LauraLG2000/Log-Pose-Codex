@@ -1,6 +1,7 @@
 const { response } = require('express');
 const { findAllPirates,  findPirate, findPirateByName, pirateExistsById, pirateExistsByName, modifyPirate, addPirate, removePirate} = require('../service/pirates');
 
+
 const getPirates = (async (req, res) => {
     const name = req.query.nombre;
 
@@ -52,8 +53,10 @@ const postPirate = (async (req, res) => {
     }
     const bounty = req.body.bounty;
     const armarHaki = req.body.armarHaki;
+    const birthDate = req.body.birthDate;
+    
 
-    if (nombre === null || bounty === null) {
+    if (nombre === null || bounty === null || birthDate === null) {
         return res.status(400).json({
             code: 400,
             return: 'bad-request',
@@ -61,7 +64,7 @@ const postPirate = (async (req, res) => {
         });
     }
 
-    const newPirate = await addPirate(nombre, bounty, armarHaki);
+    const newPirate = await addPirate(nombre, bounty, armarHaki, birthDate);
 
     res.status(201).json({
         code: 201,
@@ -86,8 +89,9 @@ const putPirate = (async (req, res) => {
     const nombre = req.body.nombre;
     const bounty = req.body.bounty;
     const armarHaki = req.body.armarHaki;
+    const birthDate = req.body.birthDate;
 
-    await modifyPirate(id, nombre, bounty, armarHaki);
+    await modifyPirate(id, nombre, bounty, armarHaki, birthDate);
 
     res.status(204).end();
 
