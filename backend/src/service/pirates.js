@@ -2,15 +2,18 @@ const db = require('../configuration/database.js').db;
 const { getDays, getDaysfromNow, getYearsFromNow } = require('../utils/dateUtils');
 
 const findAllPirates = (async () => {
+    //almacenamos la base de datos en la variable pirates
     const pirates = await db('pirates').select('*');
 
     pirates.forEach((pirate) => {
         //almacenamos en una variable el campo de birthDate de la base de datos pirate
         const birthDate = new Date(pirate.birthDate);
         pirate.years = getYearsFromNow(birthDate);
+        //formateamos la fecha al formato YYYY-MM-DD
         pirate.birthDate = new Date(pirate.birthDate).toISOString().split('T')[0];
     })
 
+    //devolvemos la base de datos actualizada con las acciones del forEach
     return pirates;
 });
 
